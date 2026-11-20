@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | About the Study</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="about" data-base="../">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/scope.html">Scope</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/comparison.html">Comparison</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-secondary btn-sm" href="../pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm" href="../pages/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold display-5">About the Study</h1>
+      <p class="lead mb-0 col-lg-8 text-white-50">LAN Sentinel: An AI-Based Network Intrusion Detection System for Local Area Networks Using Traffic Anomaly Analysis.</p>
+    </div>
+  </header>
+
+  <div class="container pt-4">
+    <ul class="nav nav-pills gap-2 flex-wrap" aria-label="On this page">
+      <li class="nav-item"><a class="nav-link border" href="#background" data-keep>Background</a></li>
+      <li class="nav-item"><a class="nav-link border" href="#problem" data-keep>Problem</a></li>
+      <li class="nav-item"><a class="nav-link border" href="#objectives" data-keep>Objectives</a></li>
+      <li class="nav-item"><a class="nav-link border" href="#significance" data-keep>Significance</a></li>
+    </ul>
+  </div>
+
+  <!-- Background -->
+  <section id="background" class="py-5">
+    <div class="container py-3">
+      <div class="row gx-lg-5 gy-4">
+        <div class="col-lg-4 reveal">
+          <span class="eyebrow">1.1</span>
+          <h2 class="fw-bold mt-2">Background of the Study</h2>
+          <img src="../assets/images/classroom.jpg" class="img-fluid rounded-4 shadow-sm mt-3 d-none d-lg-block" alt="Books, an apple and alphabet blocks on a classroom desk">
+        </div>
+        <div class="col-lg-8 reveal">
+          <p>Local area networks (LANs), especially Wi-Fi networks in schools, small offices and homes, are now the main way people reach shared resources such as file servers, printers, cloud services and IoT devices. The same wireless convenience widens the attack surface: anyone within radio range can attempt to join, and attackers who gain access can scan for hosts, intercept traffic, spoof addresses or move to other devices.</p>
+          <p>Existing defenses cover only part of the problem. Router firewalls apply fixed rules, and MAC filtering can be bypassed because MAC addresses can be cloned. Signature-based tools such as Snort and Suricata are effective against documented attacks but weak against new or modified ones, and they need regular rule tuning and technical expertise that most small networks do not have.</p>
+          <p>Anomaly-based detection builds a profile of normal behavior and flags significant deviations, so it can detect attacks without a known signature. Public datasets such as NSL-KDD, CICIDS2017 and UNSW-NB15 are commonly used for benchmarking, but they come from large or simulated enterprise networks and may not represent a small Wi-Fi LAN with a few dozen devices. Models trained on them can also produce many false positives in a different environment.</p>
+          <div class="quote-block mt-4">
+            <strong>Two gaps motivate this study.</strong>
+            <ol class="mb-0 mt-2">
+              <li>Unauthorized devices and abnormal traffic in small LANs are rarely noticed because no tool continuously compares current activity with what is normal for that specific network.</li>
+              <li>Many AI-based IDS studies stop at offline model evaluation and never deliver a working, real-time system that a non-expert administrator can use.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section id="problem" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="row gx-lg-5 gy-4">
+        <div class="col-lg-4 reveal">
+          <span class="eyebrow">1.2</span>
+          <h2 class="fw-bold mt-2">Statement of the Problem</h2>
+        </div>
+        <div class="col-lg-8 reveal">
+          <p>Unauthorized devices and abnormal traffic in local area networks may remain undetected because common measures, such as Wi-Fi passwords, firewalls and MAC address filtering, mainly focus on prevention or predefined rules. Small and medium-sized LANs may also lack dedicated security personnel and affordable monitoring tools, which increases their exposure to data theft, service disruption and network compromise.</p>
+          <p class="fw-semibold mb-3">Specifically, the study seeks to answer:</p>
+          <div class="d-grid gap-3">
+            <div class="d-flex gap-3"><span class="step-number">1</span><p class="mb-0">How can the normal behavior of a LAN be profiled from passively captured traffic and device activity?</p></div>
+            <div class="d-flex gap-3"><span class="step-number">2</span><p class="mb-0">How effectively can a machine learning model separate abnormal traffic and unauthorized devices from that normal baseline?</p></div>
+            <div class="d-flex gap-3"><span class="step-number">3</span><p class="mb-0">How well does the system perform against simulated attacks and benchmark data, in terms of detection accuracy, false alarms and processing overhead?</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectives -->
+  <section id="objectives" class="py-5">
+    <div class="container py-3">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">2</span>
+        <h2 class="fw-bold mt-2">Objectives of the Study</h2>
+      </div>
+      <div class="card border-0 shadow-sm mb-4 reveal">
+        <div class="card-body p-4 d-flex gap-3 align-items-start">
+          <span class="feature-icon flex-none"><i class="bi bi-flag"></i></span>
+          <div><h5 class="fw-bold">General objective</h5>
+          <p class="mb-0 text-muted">To develop an AI-based network intrusion detection system for local area networks that uses traffic anomaly analysis to detect unauthorized devices and abnormal network activity.</p></div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm card-hover p-4">
+          <span class="step-number mb-3">1</span><h5>Capture &amp; prepare data</h5>
+          <p class="text-muted mb-0">Capture and prepare LAN traffic (normal and simulated attack traffic) by extracting flow-level and device-level features such as packet rates, packet sizes, protocol mix and MAC/IP activity.</p></div></div>
+        <div class="col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm card-hover p-4">
+          <span class="step-number mb-3">2</span><h5>Build the detector</h5>
+          <p class="text-muted mb-2">Build an AI-based detection system that:</p>
+          <ul class="text-muted mb-0"><li>learns a baseline profile of normal traffic and known device behavior;</li><li>flags deviations as anomalies or unauthorized devices and shows them to the administrator on a dashboard.</li></ul></div></div>
+        <div class="col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm card-hover p-4">
+          <span class="step-number mb-3">3</span><h5>Test &amp; measure</h5>
+          <p class="text-muted mb-0">Test against simulated attacks (port scanning, ARP spoofing and traffic flooding) and public datasets, using accuracy, precision, recall, F1-score, false-positive rate and processing overhead.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Significance -->
+  <section id="significance" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">3</span>
+        <h2 class="fw-bold mt-2">Significance of the Study</h2>
+        <p class="text-muted">This study is expected to benefit:</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-person-gear"></i></span><h5>Network administrators &amp; IT staff</h5><p class="text-muted small mb-0">An automated way to monitor activity and be alerted to anomalies and unauthorized devices on a dashboard.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-building"></i></span><h5>Schools &amp; small organizations</h5><p class="text-muted small mb-0">A practical, lightweight monitoring approach whose processing overhead is measured in this study.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-wifi"></i></span><h5>Network users</h5><p class="text-muted small mb-0">Better detection of unauthorized devices and abnormal traffic reduces exposure to data theft and service disruption.</p></div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-code-slash"></i></span><h5>Future developers</h5><p class="text-muted small mb-0">The system design and evaluation setup can be a starting point for work in other network environments.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="text-white fw-bold fs-5 text-decoration-none" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+          <p class="mt-3 mb-0 small">An AI-based Network Intrusion Detection System for Local Area Networks using Traffic Anomaly Analysis.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-uppercase small fw-bold mb-3">Explore</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="../index.html">Home</a></li>
+            <li class="mb-2"><a href="../pages/about.html">About the Study</a></li>
+            <li class="mb-2"><a href="../pages/scope.html">Scope &amp; Limitations</a></li>
+            <li class="mb-2"><a href="../pages/comparison.html">Comparison</a></li>
+            <li class="mb-2"><a href="../pages/literature.html">Literature &amp; References</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h6 class="text-uppercase small fw-bold mb-3">Researchers</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1">Mark Jhon Congrejilla</li>
+            <li class="mb-1">Kevin Ian B. Gulle</li>
+            <li class="mb-1">Nathaniel Oras</li>
+            <li class="mb-1">Errol P. Sevilla</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; <span data-year>2026</span> LAN Sentinel &middot; Group 1 research project. For academic purposes.</span>
+        <span>Detect &amp; alert only &middot; no automatic blocking</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

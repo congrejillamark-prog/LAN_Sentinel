@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Literature & References</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="literature" data-base="../">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/scope.html">Scope</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/comparison.html">Comparison</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-secondary btn-sm" href="../pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm" href="../pages/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Literature</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold display-5">Related Literature</h1>
+      <p class="lead mb-0 col-lg-8 text-white-50">What existing research and tools say about LAN security, anomaly detection and the Philippine setting.</p>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row g-4">
+        <div class="col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm rrl-card p-4">
+          <span class="feature-icon mb-3"><i class="bi bi-wifi"></i></span>
+          <h5>Network security in LANs and the need for continuous monitoring</h5>
+          <p class="text-muted">Passwords, firewalls and MAC filtering remain useful but do not continuously analyze network behavior. Scarfone and Mell (2007) explain that intrusion detection and prevention systems help identify suspicious activity, while the limits of rule-based detection make ongoing monitoring important, especially for small networks with few security staff.</p></div></div>
+        <div class="col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm rrl-card p-4">
+          <span class="feature-icon mb-3"><i class="bi bi-database"></i></span>
+          <h5>Anomaly-based detection and traffic datasets</h5>
+          <p class="text-muted">Chandola, Banerjee and Kumar (2009) surveyed anomaly detection, including its use for finding events that match no known pattern. Ring et al. (2019) stress realistic, well-labeled datasets. Kolias et al. (2016) introduced AWID for Wi-Fi research, Sharafaldin et al. (2018) presented CICIDS2017, and Ahmad et al. (2021) reviewed machine-learning and deep-learning approaches.</p></div></div>
+        <div class="col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm rrl-card p-4">
+          <span class="feature-icon mb-3"><i class="bi bi-cpu"></i></span>
+          <h5>Lightweight machine learning methods</h5>
+          <p class="text-muted">Isolation Forest (Liu, Ting &amp; Zhou, 2008) isolates unusual observations without labels. Kitsune (Mirsky et al., 2018) uses an ensemble of autoencoders for online detection on low-cost devices, and LUCID (Doriguzzi-Corin et al., 2020) is a lightweight deep-learning DDoS detector. Sommer and Paxson (2010) caution that traffic varies across environments, so a model must be evaluated on traffic like the network it will protect.</p></div></div>
+        <div class="col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm rrl-card p-4">
+          <span class="feature-icon mb-3"><i class="bi bi-tools"></i></span>
+          <h5>Existing monitoring and intrusion detection tools</h5>
+          <p class="text-muted">Snort (Roesch, 1999), Suricata and Zeek (Paxson, 1999) detect or log known threats but may miss unseen attacks. Fing, GlassWire, Nmap, ntopng, Wireshark and Kismet each cover a part of device discovery, scanning, traffic or wireless monitoring. Security Onion bundles several tools, and Darktrace uses self-learning machine learning. Their functions, complexity and intended users differ.</p></div></div>
+        <div class="col-12 reveal"><div class="card border-0 shadow-sm rrl-card p-4">
+          <span class="feature-icon mb-3"><i class="bi bi-geo-alt"></i></span>
+          <h5>Network security challenges in the Philippine setting</h5>
+          <p class="text-muted mb-0">Natonton (2018) found differences between public and private institutions in Butuan City in having a unit responsible for network security. De Ramos and Esponilla (2022) identified user education, cloud security, security strategy and unsecured personal devices as challenges for state universities and colleges, along with budget limits. Aquino and Noro&ntilde;a (2021) discussed the limits of reactive security tools and the potential of AI to learn normal network behavior, and Miranda, Tayag and Canlas (2025) highlighted cybersecurity skills needs among new graduates.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="row justify-content-center"><div class="col-lg-9 reveal">
+        <span class="eyebrow">Synthesis</span>
+        <h2 class="fw-bold mt-2 mb-3">The research gap</h2>
+        <p>The literature shows that LAN security needs more than basic access controls and predefined rules. Anomaly-based methods can identify deviations from normal behavior, datasets such as AWID and CICIDS2017 support model development, and Isolation Forest, Kitsune and LUCID show that machine-learning detection can be computationally efficient. At the same time, traffic differs between environments, so models must be evaluated carefully to manage false alarms.</p>
+        <p>The reviewed applications cover important but separate parts of monitoring: device discovery, packet inspection and signature-based detection. Broader platforms need more expertise or resources, and Philippine studies point to budget and staffing constraints in schools.</p>
+        <div class="quote-block"><strong>The gap:</strong> a practical, lightweight system that combines device visibility, machine-learning-based traffic anomaly detection and an administrator-facing dashboard for a small Wi-Fi LAN. LAN Sentinel is intended to fill it.</div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="py-5" id="references">
+    <div class="container py-3">
+      <div class="row justify-content-center"><div class="col-lg-10">
+        <h2 class="fw-bold mb-4">References</h2>
+        <ol class="ref-list">
+          <li>Ahmad, Z., Shahid Khan, A., Wai Shiang, C., Abdullah, J., &amp; Ahmad, F. (2021). Network intrusion detection system: A systematic study of machine learning and deep learning approaches. Transactions on Emerging Telecommunications Technologies, 32(1), e4150. <a href="https://doi.org/10.1002/ett.4150" target="_blank" rel="noopener">https://doi.org/10.1002/ett.4150</a></li>
+          <li>Aquino, M. F. M., &amp; Noroña, M. I. (2021). Enhancing cyber security in the Philippine academe: A risk-based IT project assessment approach. In Proceedings of the 11th Annual International Conference on Industrial Engineering and Operations Management (pp. 5166–5179). IEOM Society International. <a href="https://www.ieomsociety.org/singapore2021/papers/878.pdf" target="_blank" rel="noopener">https://www.ieomsociety.org/singapore2021/papers/878.pdf</a></li>
+          <li>Chandola, V., Banerjee, A., &amp; Kumar, V. (2009). Anomaly detection: A survey. ACM Computing Surveys, 41(3), 1–58. <a href="https://doi.org/10.1145/1541880.1541882" target="_blank" rel="noopener">https://doi.org/10.1145/1541880.1541882</a></li>
+          <li>Cisco Systems, Inc. (n.d.). Snort 3 user manual. Snort. <a href="https://snort.org/downloads/snortplus/snort_user.html" target="_blank" rel="noopener">https://snort.org/downloads/snortplus/snort_user.html</a></li>
+          <li>Darktrace. (n.d.). Enterprise Immune System [Product brief]. Darktrace. <a href="https://cdn.blueally.com/cyberaiworks/datasheets/ds-enterprise-immune-system.pdf" target="_blank" rel="noopener">https://cdn.blueally.com/cyberaiworks/datasheets/ds-enterprise-immune-system.pdf</a></li>
+          <li>De Ramos, N. M., &amp; Esponilla, F. D., II. (2022). Cybersecurity program for Philippine higher education institutions: A multiple-case study. International Journal of Evaluation and Research in Education, 11(3), 1198–1209. <a href="https://doi.org/10.11591/ijere.v11i3.22863" target="_blank" rel="noopener">https://doi.org/10.11591/ijere.v11i3.22863</a></li>
+          <li>Doriguzzi-Corin, R., Millar, S., Scott-Hayward, S., Martínez-del-Rincón, J., &amp; Siracusa, D. (2020). LUCID: A practical, lightweight deep learning solution for DDoS attack detection. IEEE Transactions on Network and Service Management, 17(2), 876–889. <a href="https://doi.org/10.1109/TNSM.2020.2971776" target="_blank" rel="noopener">https://doi.org/10.1109/TNSM.2020.2971776</a></li>
+          <li>Fing. (n.d.). Network security. <a href="https://www.fing.com/secure/" target="_blank" rel="noopener">https://www.fing.com/secure/</a></li>
+          <li>García-Teodoro, P., Díaz-Verdejo, J., Maciá-Fernández, G., &amp; Vázquez, E. (2009). Anomaly-based network intrusion detection: Techniques, systems and challenges. Computers &amp; Security, 28(1–2), 18–28. <a href="https://doi.org/10.1016/j.cose.2008.08.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.cose.2008.08.003</a></li>
+          <li>GlassWire. (n.d.). GlassWire network security monitor user guide. <a href="https://www.glasswire.com/userguide/" target="_blank" rel="noopener">https://www.glasswire.com/userguide/</a></li>
+          <li>Kismet. (n.d.). Kismet documentation: Alerts. <a href="https://kismetwireless.net/docs/readme/alerts/alerts/" target="_blank" rel="noopener">https://kismetwireless.net/docs/readme/alerts/alerts/</a></li>
+          <li>Kolias, C., Kambourakis, G., Stavrou, A., &amp; Gritzalis, S. (2016). Intrusion detection in 802.11 networks: Empirical evaluation of threats and a public dataset. IEEE Communications Surveys &amp; Tutorials, 18(1), 184–208. <a href="https://doi.org/10.1109/COMST.2015.2402161" target="_blank" rel="noopener">https://doi.org/10.1109/COMST.2015.2402161</a></li>
+          <li>Liu, F. T., Ting, K. M., &amp; Zhou, Z.-H. (2008). Isolation forest. In Proceedings of the 8th IEEE International Conference on Data Mining (pp. 413–422). IEEE. <a href="https://doi.org/10.1109/ICDM.2008.17" target="_blank" rel="noopener">https://doi.org/10.1109/ICDM.2008.17</a></li>
+          <li>Miranda, J. P. P., Tayag, M. I., &amp; Canlas, J. D. (2025). Cybersecurity skills in new graduates: A Philippine perspective. International Journal of Advances in Applied Sciences, 14(4), 1217–1228. <a href="https://doi.org/10.11591/ijaas.v14.i4.pp1217-1228" target="_blank" rel="noopener">https://doi.org/10.11591/ijaas.v14.i4.pp1217-1228</a></li>
+          <li>Mirsky, Y., Doitshman, T., Elovici, Y., &amp; Shabtai, A. (2018). Kitsune: An ensemble of autoencoders for online network intrusion detection. In Proceedings of the Network and Distributed System Security Symposium (NDSS). <a href="https://doi.org/10.14722/ndss.2018.23204" target="_blank" rel="noopener">https://doi.org/10.14722/ndss.2018.23204</a></li>
+          <li>Natonton, O. R. R. (2018, November). Cybersecurity awareness among selected educational institutions in Butuan City, PH [Conference paper]. Mindanao Peace Studies &amp; Conference 4, Butuan City, Philippines. <a href="https://www.researchgate.net/publication/331088436" target="_blank" rel="noopener">https://www.researchgate.net/publication/331088436</a></li>
+          <li>Nmap Project. (n.d.). Nmap reference guide. <a href="https://nmap.org/man/" target="_blank" rel="noopener">https://nmap.org/man/</a></li>
+          <li>ntop. (n.d.). ntopng documentation. <a href="https://ntop.org/guides/ntopng" target="_blank" rel="noopener">https://ntop.org/guides/ntopng</a></li>
+          <li>Open Information Security Foundation. (n.d.). Suricata user guide. <a href="https://docs.suricata.io/" target="_blank" rel="noopener">https://docs.suricata.io/</a></li>
+          <li>Paxson, V. (1999). Bro: A system for detecting network intruders in real-time. Computer Networks, 31(23–24), 2435–2463. <a href="https://www.icir.org/vern/papers/bro-CN99.html" target="_blank" rel="noopener">https://www.icir.org/vern/papers/bro-CN99.html</a></li>
+          <li>Ring, M., Wunderlich, S., Scheuring, D., Landes, D., &amp; Hotho, A. (2019). A survey of network-based intrusion detection data sets. Computers &amp; Security, 86, 147–167. <a href="https://doi.org/10.1016/j.cose.2019.06.005" target="_blank" rel="noopener">https://doi.org/10.1016/j.cose.2019.06.005</a></li>
+          <li>Roesch, M. (1999). Snort: Lightweight intrusion detection for networks. In Proceedings of the 13th Systems Administration Conference (LISA ’99) (pp. 229–238). USENIX Association. <a href="https://www.usenix.org/legacy/event/lisa99/roesch.html" target="_blank" rel="noopener">https://www.usenix.org/legacy/event/lisa99/roesch.html</a></li>
+          <li>Scarfone, K., &amp; Mell, P. (2007). Guide to intrusion detection and prevention systems (IDPS) (NIST Special Publication 800-94). National Institute of Standards and Technology. <a href="https://csrc.nist.gov/pubs/sp/800/94/final" target="_blank" rel="noopener">https://csrc.nist.gov/pubs/sp/800/94/final</a></li>
+          <li>Security Onion Solutions. (n.d.). Security Onion documentation: Network visibility. <a href="https://docs.securityonion.net/en/2.4/network.html" target="_blank" rel="noopener">https://docs.securityonion.net/en/2.4/network.html</a></li>
+          <li>Sharafaldin, I., Lashkari, A. H., &amp; Ghorbani, A. A. (2018). Toward generating a new intrusion detection dataset and intrusion detection traffic characterization. In Proceedings of the 4th International Conference on Information Systems Security and Privacy (ICISSP) (pp. 108–116). <a href="https://doi.org/10.5220/0006639801080116" target="_blank" rel="noopener">https://doi.org/10.5220/0006639801080116</a></li>
+          <li>Sommer, R., &amp; Paxson, V. (2010). Outside the closed world: On using machine learning for network intrusion detection. In Proceedings of the 2010 IEEE Symposium on Security and Privacy (pp. 305–316). IEEE. <a href="https://doi.org/10.1109/SP.2010.25" target="_blank" rel="noopener">https://doi.org/10.1109/SP.2010.25</a></li>
+          <li>Wireshark Foundation. (n.d.). Wireshark user’s guide. <a href="https://www.wireshark.org/docs/wsug_html_chunked/" target="_blank" rel="noopener">https://www.wireshark.org/docs/wsug_html_chunked/</a></li>
+          <li>Zeek Project. (n.d.). Zeek documentation: About Zeek. <a href="https://docs.zeek.org/en/lts/about.html" target="_blank" rel="noopener">https://docs.zeek.org/en/lts/about.html</a></li>
+        </ol>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="text-white fw-bold fs-5 text-decoration-none" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+          <p class="mt-3 mb-0 small">An AI-based Network Intrusion Detection System for Local Area Networks using Traffic Anomaly Analysis.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-uppercase small fw-bold mb-3">Explore</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="../index.html">Home</a></li>
+            <li class="mb-2"><a href="../pages/about.html">About the Study</a></li>
+            <li class="mb-2"><a href="../pages/scope.html">Scope &amp; Limitations</a></li>
+            <li class="mb-2"><a href="../pages/comparison.html">Comparison</a></li>
+            <li class="mb-2"><a href="../pages/literature.html">Literature &amp; References</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h6 class="text-uppercase small fw-bold mb-3">Researchers</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1">Mark Jhon Congrejilla</li>
+            <li class="mb-1">Kevin Ian B. Gulle</li>
+            <li class="mb-1">Nathaniel Oras</li>
+            <li class="mb-1">Errol P. Sevilla</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; <span data-year>2026</span> LAN Sentinel &middot; Group 1 research project. For academic purposes.</span>
+        <span>Detect &amp; alert only &middot; no automatic blocking</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

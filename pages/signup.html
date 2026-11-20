@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Sign Up</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="signup" data-base="../">
+  <div class="container-fluid">
+    <div class="row auth-wrapper">
+      <!-- Form side -->
+      <div class="col-lg-6 d-flex align-items-center justify-content-center py-5 order-2 order-lg-1">
+        <div class="w-100 px-3" style="max-width: 460px;">
+          <a href="../index.html" class="navbar-brand fw-bold fs-4 text-decoration-none text-dark d-block mb-4"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
+          <h3 class="fw-bold">Create your account</h3>
+          <p class="text-muted">It only takes a minute.</p>
+
+          <form data-auth="signup" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label for="first" class="form-label">First name</label>
+                <input type="text" class="form-control" id="first" placeholder="Juan" required autocomplete="given-name">
+                <div class="invalid-feedback">Required.</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="last" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="last" placeholder="Dela Cruz" required autocomplete="family-name">
+                <div class="invalid-feedback">Required.</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required autocomplete="email">
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label">I am a...</label>
+              <select class="form-select" id="role" required>
+                <option value="" selected disabled>Choose...</option>
+                <option>Network administrator</option>
+                <option>IT staff</option>
+                <option>Student / researcher</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback">Please choose a role.</div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required minlength="6" autocomplete="new-password">
+                <div class="invalid-feedback">At least 6 characters.</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="confirm" class="form-label">Confirm password</label>
+                <input type="password" class="form-control" id="confirm" required autocomplete="new-password">
+                <div class="invalid-feedback">Passwords must match.</div>
+              </div>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="terms" required>
+              <label class="form-check-label" for="terms">I agree to the <a href="#">Terms &amp; Conditions</a></label>
+              <div class="invalid-feedback">You must agree before continuing.</div>
+            </div>
+            <button type="submit" class="btn btn-brand w-100 py-2">Sign Up</button>
+          </form>
+
+          <div class="alert alert-secondary small mt-4 mb-0"><i class="bi bi-info-circle me-1"></i> Demo only: nothing is saved or sent anywhere yet.</div>
+          <p class="text-center mt-4 mb-0">Already have an account? <a href="login.html">Login</a></p>
+          <p class="text-center mt-2 mb-0"><a href="../index.html" class="small text-muted"><i class="bi bi-arrow-left"></i> Back to home</a></p>
+        </div>
+      </div>
+
+      <!-- Image side -->
+      <div class="col-lg-6 auth-image signup d-flex align-items-end p-5 order-1 order-lg-2">
+        <div class="text-white">
+          <h2 class="fw-bold">Watch your network, not just your password.</h2>
+          <p class="mb-0">Create an account to follow alerts, devices and reports in one place.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Home</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="home" data-base="">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/scope.html">Scope</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/comparison.html">Comparison</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-secondary btn-sm" href="pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm" href="pages/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center gx-lg-5 gy-4">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="hero-badge mb-4"><span class="pulse-dot"></span> AI-based NIDS for Wi-Fi local area networks</span>
+          <h1 class="display-4 fw-bold">Know who and what is on your network, <span class="text-accent">before it becomes a problem.</span></h1>
+          <p class="lead my-4 text-white-50">LAN Sentinel learns how your Wi-Fi LAN normally behaves and alerts administrators when a device or traffic pattern does not fit that baseline.</p>
+          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+            <a href="pages/dashboard.html" class="btn btn-brand btn-lg"><i class="bi bi-speedometer2 me-2"></i>View Demo Dashboard</a>
+            <a href="pages/about.html" class="btn btn-outline-light btn-lg">Read the Study</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-panel p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <strong>What LAN Sentinel watches for</strong>
+              <span class="badge text-bg-info">Anomaly-based</span>
+            </div>
+            <div class="row-item"><span><i class="bi bi-radar text-accent me-2"></i>Port scanning</span><i class="bi bi-eye text-white-50"></i></div>
+            <div class="row-item"><span><i class="bi bi-shuffle text-accent me-2"></i>ARP spoofing</span><i class="bi bi-eye text-white-50"></i></div>
+            <div class="row-item"><span><i class="bi bi-lightning-charge text-accent me-2"></i>DoS / traffic flooding</span><i class="bi bi-eye text-white-50"></i></div>
+            <div class="row-item"><span><i class="bi bi-hdd-network text-accent me-2"></i>Unauthorized devices</span><i class="bi bi-eye text-white-50"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Problem -->
+  <section id="why" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">The problem</span>
+        <h2 class="fw-bold mt-2">Why small networks stay exposed</h2>
+        <p class="text-muted col-lg-7 mx-auto">Wi-Fi makes shared resources easy to reach, and it also makes unauthorized access easier to attempt.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="card h-100 border-0 shadow-sm card-hover p-4">
+            <span class="feature-icon mb-3"><i class="bi bi-shield-lock"></i></span>
+            <h5>Prevention is not monitoring</h5>
+            <p class="text-muted mb-0">Wi-Fi passwords, firewalls and MAC filtering follow fixed rules. They do not continuously watch behavior, and MAC addresses can be cloned.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card h-100 border-0 shadow-sm card-hover p-4">
+            <span class="feature-icon mb-3"><i class="bi bi-journal-code"></i></span>
+            <h5>Signature tools need expertise</h5>
+            <p class="text-muted mb-0">Snort and Suricata match known attack patterns, so new or modified attacks can slip by, and rules need regular tuning.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card h-100 border-0 shadow-sm card-hover p-4">
+            <span class="feature-icon mb-3"><i class="bi bi-people"></i></span>
+            <h5>Few people, small budgets</h5>
+            <p class="text-muted mb-0">Schools and small offices often have no dedicated security staff or affordable monitoring tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-5 bg-white" id="how">
+    <div class="container py-4">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">How it works</span>
+        <h2 class="fw-bold mt-2">From raw packets to a clear alert</h2>
+      </div>
+      <div class="row g-4 text-center step-line">
+        <div class="col-md-6 col-lg-3 reveal">
+          <span class="step-number mb-3">1</span>
+          <h5>Capture</h5>
+          <p class="text-muted small mb-0">Passive packet capture on the LAN, for example through a mirrored port or a monitoring host.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <span class="step-number mb-3">2</span>
+          <h5>Extract features</h5>
+          <p class="text-muted small mb-0">Flow-level and device-level features: packet rates, packet sizes, protocol mix and MAC/IP activity.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <span class="step-number mb-3">3</span>
+          <h5>Learn &amp; detect</h5>
+          <p class="text-muted small mb-0">A machine learning model learns the baseline of normal behavior and flags deviations as anomalies.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <span class="step-number mb-3">4</span>
+          <h5>Alert</h5>
+          <p class="text-muted small mb-0">Anomalies and unauthorized devices appear on a web dashboard with logs and basic reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="py-5" id="features">
+    <div class="container py-4">
+      <div class="row align-items-center gx-lg-5 gy-4">
+        <div class="col-lg-6 reveal">
+          <img src="assets/images/students.jpg" class="img-fluid rounded-4 shadow" alt="Students and staff working together around laptops in a library">
+        </div>
+        <div class="col-lg-6 reveal">
+          <span class="eyebrow">Built for small networks</span>
+          <h2 class="fw-bold mt-2">Designed for administrators without a security team</h2>
+          <p class="text-muted">LAN Sentinel pairs the ease of use of device scanners with anomaly-based threat detection, in one lightweight tool.</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Device discovery and unknown-device alerts</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Machine learning baseline for one specific LAN</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Detection of port scans, ARP spoofing and flooding</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Real-time alerts, event history and basic reports</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Low-cost: no expensive licenses or specialized hardware</li>
+          </ul>
+          <a href="pages/comparison.html" class="btn btn-outline-brand">See how it compares <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="stat-band py-5">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3"><div class="num">4</div><div class="small text-white-50">Simulated attack scenarios</div></div>
+        <div class="col-6 col-lg-3"><div class="num">6</div><div class="small text-white-50">Evaluation metrics</div></div>
+        <div class="col-6 col-lg-3"><div class="num">1</div><div class="small text-white-50">LAN with a Wi-Fi segment</div></div>
+        <div class="col-6 col-lg-3"><div class="num">0</div><div class="small text-white-50">Traffic blocked: detect &amp; alert only</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evaluation -->
+  <section class="py-5" id="evaluation">
+    <div class="container py-4">
+      <div class="row gx-lg-5 gy-4 align-items-center">
+        <div class="col-lg-5 reveal">
+          <span class="eyebrow">Evaluation plan</span>
+          <h2 class="fw-bold mt-2">How the system will be tested</h2>
+          <p class="text-muted">Testing is done in a controlled environment with simulated attacks (port scanning, ARP spoofing and traffic flooding) and publicly available datasets. Results will be published here once testing is complete.</p>
+          <a href="pages/scope.html" class="btn btn-brand">Scope &amp; limitations</a>
+        </div>
+        <div class="col-lg-7 reveal">
+          <div class="row g-3">
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-bullseye fs-3 text-brand"></i><div class="fw-semibold mt-1">Accuracy</div></div></div>
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-crosshair fs-3 text-brand"></i><div class="fw-semibold mt-1">Precision</div></div></div>
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-search fs-3 text-brand"></i><div class="fw-semibold mt-1">Recall</div></div></div>
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-graph-up fs-3 text-brand"></i><div class="fw-semibold mt-1">F1-score</div></div></div>
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-bell-slash fs-3 text-brand"></i><div class="fw-semibold mt-1">False-positive rate</div></div></div>
+            <div class="col-6 col-md-4"><div class="metric-tile p-3 text-center h-100"><i class="bi bi-cpu fs-3 text-brand"></i><div class="fw-semibold mt-1">Processing overhead</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="py-5 bg-white" id="team">
+    <div class="container py-4">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">Research team</span>
+        <h2 class="fw-bold mt-2">Group 1</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-lg-3 reveal"><div class="card border-0 shadow-sm text-center p-4 h-100"><span class="member-avatar mx-auto mb-3">MC</span><h6 class="fw-bold mb-0">Mark Jhon Congrejilla</h6><small class="text-muted">Researcher</small></div></div>
+        <div class="col-6 col-lg-3 reveal"><div class="card border-0 shadow-sm text-center p-4 h-100"><span class="member-avatar mx-auto mb-3">KG</span><h6 class="fw-bold mb-0">Kevin Ian B. Gulle</h6><small class="text-muted">Researcher</small></div></div>
+        <div class="col-6 col-lg-3 reveal"><div class="card border-0 shadow-sm text-center p-4 h-100"><span class="member-avatar mx-auto mb-3">NO</span><h6 class="fw-bold mb-0">Nathaniel Oras</h6><small class="text-muted">Researcher</small></div></div>
+        <div class="col-6 col-lg-3 reveal"><div class="card border-0 shadow-sm text-center p-4 h-100"><span class="member-avatar mx-auto mb-3">ES</span><h6 class="fw-bold mb-0">Errol P. Sevilla</h6><small class="text-muted">Researcher</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5" style="background: linear-gradient(110deg, var(--navy), var(--navy-2)); color:#fff;">
+    <div class="container py-3 text-center">
+      <h2 class="fw-bold">See the alert dashboard in action</h2>
+      <p class="text-white-50">Explore a sample dashboard with simulated alerts, devices and traffic.</p>
+      <a href="pages/dashboard.html" class="btn btn-brand btn-lg me-2">Open Demo Dashboard</a>
+      <a href="pages/signup.html" class="btn btn-outline-light btn-lg">Create Account</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="text-white fw-bold fs-5 text-decoration-none" href="index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+          <p class="mt-3 mb-0 small">An AI-based Network Intrusion Detection System for Local Area Networks using Traffic Anomaly Analysis.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-uppercase small fw-bold mb-3">Explore</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="pages/about.html">About the Study</a></li>
+            <li class="mb-2"><a href="pages/scope.html">Scope &amp; Limitations</a></li>
+            <li class="mb-2"><a href="pages/comparison.html">Comparison</a></li>
+            <li class="mb-2"><a href="pages/literature.html">Literature &amp; References</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h6 class="text-uppercase small fw-bold mb-3">Researchers</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1">Mark Jhon Congrejilla</li>
+            <li class="mb-1">Kevin Ian B. Gulle</li>
+            <li class="mb-1">Nathaniel Oras</li>
+            <li class="mb-1">Errol P. Sevilla</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; <span data-year>2026</span> LAN Sentinel &middot; Group 1 research project. For academic purposes.</span>
+        <span>Detect &amp; alert only &middot; no automatic blocking</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="dashboard" data-base="../">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar (desktop) -->
+      <aside class="col-lg-2 d-none d-lg-block sidebar p-3">
+        <a href="../index.html" class="text-white text-decoration-none fw-bold fs-5 d-block mb-4"><i class="bi bi-shield-check text-accent"></i> LAN Sentinel</a>
+        <ul class="nav nav-pills flex-column gap-1">
+          <li class="nav-item"><a href="#overview" class="nav-link  active"><i class="bi bi-speedometer2 me-2"></i>Overview</a></li>
+          <li class="nav-item"><a href="#alerts" class="nav-link "><i class="bi bi-bell me-2"></i>Alerts <span class="badge text-bg-danger ms-1" id="alertCount">0</span></a></li>
+          <li class="nav-item"><a href="#devices" class="nav-link "><i class="bi bi-hdd-network me-2"></i>Devices</a></li>
+          <li class="nav-item"><a href="#evaluation" class="nav-link "><i class="bi bi-clipboard-data me-2"></i>Evaluation</a></li>
+          <li class="nav-item mt-4"><a href="../index.html" class="nav-link "><i class="bi bi-house me-2"></i>Project site</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link "><i class="bi bi-box-arrow-left me-2"></i>Logout</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main -->
+      <main class="col-lg-10 p-0">
+        <!-- Top bar -->
+        <nav class="navbar bg-white shadow-sm px-3 sticky-top">
+          <button class="btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+          <span class="navbar-text fw-semibold d-none d-sm-inline ms-2">Network Dashboard</span>
+          <div class="dropdown ms-auto">
+            <a href="#" class="d-flex align-items-center text-decoration-none text-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="member-avatar me-2" style="width:36px;height:36px;font-size:.85rem;">NA</span>
+              <span>Network Admin</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="login.html">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="p-4">
+          <section id="overview" class="dash-section">
+            <h3 class="fw-bold mb-1">Welcome back, Admin</h3>
+            <p class="text-muted mb-3">Here is what is happening on your network.</p>
+            <div class="dash-banner p-3 mb-4"><i class="bi bi-info-circle me-1"></i> <strong>Sample data.</strong> This dashboard previews the interface with simulated devices and alerts. Real detection results will appear once the system has been trained and tested.</div>
+
+            <!-- Stat cards -->
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6 col-xl-3"><div class="card stat-card border-0 shadow-sm"><div class="card-body d-flex justify-content-between align-items-center">
+                <div><div class="text-muted small">Devices online</div><div class="fs-3 fw-bold" id="statDevices">0</div></div><i class="bi bi-hdd-network text-primary"></i></div></div></div>
+              <div class="col-sm-6 col-xl-3"><div class="card stat-card border-0 shadow-sm"><div class="card-body d-flex justify-content-between align-items-center">
+                <div><div class="text-muted small">Unknown devices</div><div class="fs-3 fw-bold" id="statUnknown">0</div></div><i class="bi bi-question-diamond text-warning"></i></div></div></div>
+              <div class="col-sm-6 col-xl-3"><div class="card stat-card border-0 shadow-sm"><div class="card-body d-flex justify-content-between align-items-center">
+                <div><div class="text-muted small">Alerts today</div><div class="fs-3 fw-bold" id="statAlerts">0</div></div><i class="bi bi-bell text-info"></i></div></div></div>
+              <div class="col-sm-6 col-xl-3"><div class="card stat-card border-0 shadow-sm"><div class="card-body d-flex justify-content-between align-items-center">
+                <div><div class="text-muted small">High severity (new)</div><div class="fs-3 fw-bold" id="statHigh">0</div></div><i class="bi bi-exclamation-triangle text-danger"></i></div></div></div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-white fw-semibold d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>Live traffic signal</span>
+                <div class="d-flex flex-wrap gap-2">
+                  <label for="attackType" class="visually-hidden">Attack type to simulate</label>
+                  <select id="attackType" class="form-select form-select-sm w-auto">
+                    <option value="random">Random attack</option>
+                    <option>Port Scan</option>
+                    <option>ARP Spoofing</option>
+                    <option>DoS Flooding</option>
+                    <option>Unauthorized Device</option>
+                  </select>
+                  <button class="btn btn-sm btn-brand" id="simulateBtn" type="button"><i class="bi bi-lightning-charge me-1"></i>Simulate attack</button>
+                  <button class="btn btn-sm btn-outline-secondary" id="pauseBtn" type="button"><i class="bi bi-pause-fill me-1"></i>Pause</button>
+                  <button class="btn btn-sm btn-outline-secondary" id="resetBtn" type="button"><i class="bi bi-arrow-counterclockwise me-1"></i>Reset</button>
+                </div>
+              </div>
+              <div class="signal-panel">
+                <div class="sig-top">
+                  <span class="sig-live" id="sigLive"><span class="pulse-dot"></span> LIVE</span>
+                  <span class="sig-read"><b id="sigPps">0</b> pkt/s</span>
+                  <span class="sig-read small">Flagged in window: <b id="sigFlag">0</b></span>
+                  <span class="sig-chip sig-ok ms-auto" id="sigStatus" role="status">NORMAL</span>
+                </div>
+                <canvas id="signalCanvas" role="img" aria-label="Live line chart of network traffic in packets per second. Values above the dashed threshold are flagged as anomalies in red."></canvas>
+              </div>
+            </div>
+          </section>
+
+          <section id="alerts" class="dash-section mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white fw-semibold">Recent alerts</div>
+              <div class="card-body pb-0">
+                <div class="btn-group flex-wrap" role="group" aria-label="Filter alerts by type">
+                  <button type="button" class="btn btn-sm btn-outline-secondary active" data-filter="all">All</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-filter="Port Scan">Port Scan</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-filter="ARP Spoofing">ARP Spoofing</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-filter="DoS Flooding">DoS Flooding</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-filter="Unauthorized Device">Unauthorized Device</button>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 mt-3">
+                  <thead class="table-light"><tr><th>Time</th><th>Type</th><th>Source</th><th>Severity</th><th>Status</th><th></th></tr></thead>
+                  <tbody id="alertBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="devices" class="dash-section mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white fw-semibold">Devices on the LAN</div>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                  <thead class="table-light"><tr><th>Name</th><th>IP address</th><th class="d-none d-md-table-cell">MAC address</th><th>Status</th><th></th></tr></thead>
+                  <tbody id="deviceBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="evaluation" class="dash-section mb-2">
+            <h5 class="fw-bold">Evaluation metrics</h5>
+            <p class="text-muted small">To be measured during testing against simulated attacks and public datasets.</p>
+            <div class="row g-3">
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">Accuracy</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">Precision</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">Recall</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">F1-score</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">False-positive rate</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+              <div class="col-6 col-md-4 col-xl-2"><div class="metric-tile p-3 text-center h-100"><div class="text-muted small">Processing overhead</div><div class="fs-5 fw-bold text-secondary">Pending</div></div></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Mobile sidebar -->
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="background: var(--navy) !important;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel"><i class="bi bi-shield-check text-accent"></i> LAN Sentinel</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body sidebar" style="min-height:0;height:auto;position:static;">
+      <ul class="nav nav-pills flex-column gap-1">
+          <li class="nav-item"><a href="#overview" class="nav-link text-white active"><i class="bi bi-speedometer2 me-2"></i>Overview</a></li>
+          <li class="nav-item"><a href="#alerts" class="nav-link text-white"><i class="bi bi-bell me-2"></i>Alerts <span class="badge text-bg-danger ms-1" id="alertCountM">0</span></a></li>
+          <li class="nav-item"><a href="#devices" class="nav-link text-white"><i class="bi bi-hdd-network me-2"></i>Devices</a></li>
+          <li class="nav-item"><a href="#evaluation" class="nav-link text-white"><i class="bi bi-clipboard-data me-2"></i>Evaluation</a></li>
+          <li class="nav-item mt-4"><a href="../index.html" class="nav-link text-white"><i class="bi bi-house me-2"></i>Project site</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link text-white"><i class="bi bi-box-arrow-left me-2"></i>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Live status + toast -->
+  <span class="visually-hidden" id="liveStatus" role="status" aria-live="polite"></span>
+  <div class="toast-container position-fixed bottom-0 start-0 p-3" style="z-index:1090;">
+    <div id="demoToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex"><div class="toast-body"></div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

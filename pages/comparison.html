@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LAN Sentinel: an AI-based network intrusion detection system for local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Comparison</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="comparison" data-base="../">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/scope.html">Scope</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/comparison.html">Comparison</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/dashboard.html">Dashboard</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-secondary btn-sm" href="../pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm" href="../pages/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Comparison</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold display-5">Comparison with Existing Applications</h1>
+      <p class="lead mb-0 col-lg-8 text-white-50">LAN Sentinel compared with eleven tools used to discover devices, analyze traffic, or detect intrusions.</p>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="row g-3 align-items-end mb-3">
+        <div class="col-md-6">
+          <label for="catFilter" class="form-label fw-semibold">Filter by category</label>
+          <select id="catFilter" class="form-select">
+            <option value="all">All categories</option>
+            <option>Device Visibility</option>
+            <option>Traffic Monitoring and Analysis</option>
+            <option>Threat Detection</option>
+            <option>Alerting and Reporting</option>
+            <option>Deployment and Accessibility</option>
+          </select>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <span class="legend-chip"><i class="bi bi-check-circle-fill sym-y"></i> Supported</span>
+          <span class="legend-chip"><i class="bi bi-dash-circle-fill sym-p"></i> Partial</span>
+          <span class="legend-chip me-0"><i class="bi bi-x-circle-fill sym-n"></i> Not supported</span>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs" id="cmpTabs" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" data-keep id="t1-tab" data-bs-toggle="tab" data-bs-target="#t1" type="button" role="tab" aria-controls="t1" aria-selected="true">Table 1 &middot; Monitoring &amp; visibility</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-keep id="t2-tab" data-bs-toggle="tab" data-bs-target="#t2" type="button" role="tab" aria-controls="t2" aria-selected="false">Table 2 &middot; Intrusion detection</button></li>
+      </ul>
+      <div class="tab-content pt-3">
+        <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="t1-tab" tabindex="0">
+          <p class="small text-muted mb-2">Fing, GlassWire, Nmap, ntopng, Wireshark and Kismet. <strong id="table1Score"></strong></p>
+          <div class="cmp-wrap"><table class="table cmp-table" id="table1"></table></div>
+        </div>
+        <div class="tab-pane fade" id="t2" role="tabpanel" aria-labelledby="t2-tab" tabindex="0">
+          <p class="small text-muted mb-2">Snort, Suricata, Zeek, Security Onion and Darktrace. <strong id="table2Score"></strong></p>
+          <div class="cmp-wrap"><table class="table cmp-table" id="table2"></table></div>
+        </div>
+      </div>
+      <p class="small text-muted mt-3">Ratings for existing applications are based on each vendor's or project's public documentation and may vary by edition, plan or configuration. A partial rating is used where support is indirect or needs extra configuration or scripting. The LAN Sentinel column shows <em>planned</em> features as stated in the objectives and scope.</p>
+    </div>
+  </section>
+
+  <section class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mb-5 reveal"><span class="eyebrow">Findings</span><h2 class="fw-bold mt-2">Where the gap is</h2></div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm p-4"><h5><i class="bi bi-search text-brand me-2"></i>Device scanners</h5><p class="text-muted mb-0">Fing, GlassWire and ntopng are strong in device visibility and unknown-device alerts, but offer little machine learning-based anomaly detection. Nmap discovers devices and ports only on demand.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm p-4"><h5><i class="bi bi-activity text-brand me-2"></i>Packet &amp; wireless tools</h5><p class="text-muted mb-0">Wireshark gives full packet visibility but only for manual analysis, and Kismet covers only the wireless layer.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="card h-100 border-0 shadow-sm p-4"><h5><i class="bi bi-shield-shaded text-brand me-2"></i>IDS platforms</h5><p class="text-muted mb-0">Snort, Suricata, Zeek and Security Onion offer wide threat coverage but depend on rule sets or scripts, need expertise and are heavier to deploy; none uses a learned model of normal behavior.</p></div></div>
+        <div class="col-md-6 col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm p-4"><h5><i class="bi bi-cash-coin text-brand me-2"></i>Darktrace</h5><p class="text-muted mb-0">The only reviewed tool that uses machine learning to detect anomalies, but it is a commercial product.</p></div></div>
+        <div class="col-md-6 col-lg-6 reveal"><div class="card h-100 border-0 shadow-sm p-4 border-start border-4" style="border-color: var(--brand) !important;"><h5><i class="bi bi-shield-check text-brand me-2"></i>LAN Sentinel</h5><p class="text-muted mb-0">Combines device discovery, a machine learning baseline of normal behavior, detection of port scanning, ARP spoofing and traffic flooding, and a dashboard in one lightweight tool. It detects and alerts only; it does not block traffic or inspect encrypted payloads.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <a class="text-white fw-bold fs-5 text-decoration-none" href="../index.html"><i class="bi bi-shield-check"></i> LAN Sentinel</a>
+          <p class="mt-3 mb-0 small">An AI-based Network Intrusion Detection System for Local Area Networks using Traffic Anomaly Analysis.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-uppercase small fw-bold mb-3">Explore</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="../index.html">Home</a></li>
+            <li class="mb-2"><a href="../pages/about.html">About the Study</a></li>
+            <li class="mb-2"><a href="../pages/scope.html">Scope &amp; Limitations</a></li>
+            <li class="mb-2"><a href="../pages/comparison.html">Comparison</a></li>
+            <li class="mb-2"><a href="../pages/literature.html">Literature &amp; References</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h6 class="text-uppercase small fw-bold mb-3">Researchers</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1">Mark Jhon Congrejilla</li>
+            <li class="mb-1">Kevin Ian B. Gulle</li>
+            <li class="mb-1">Nathaniel Oras</li>
+            <li class="mb-1">Errol P. Sevilla</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small">
+        <span>&copy; <span data-year>2026</span> LAN Sentinel &middot; Group 1 research project. For academic purposes.</span>
+        <span>Detect &amp; alert only &middot; no automatic blocking</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/comparison.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
